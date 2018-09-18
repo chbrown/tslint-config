@@ -1,0 +1,17 @@
+{
+  "name": "@chbrown/tslint-config",
+  "version": "0.0.1",
+  "description": "TSLint configuration files",
+  "keywords": [
+    "typescript",
+    "tslint",
+    "config"
+  ],
+  "homepage": "https://github.com/chbrown/tslint-config",
+  "repository": "github:chbrown/tslint-config",
+  "author": "Christopher Brown <io@henrian.com>",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^3.11.0"
+  }
+}
