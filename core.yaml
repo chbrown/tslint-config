@@ -1,0 +1,137 @@
+---
+defaultSeverity: warn
+# Reference: https://palantir.github.io/tslint/rules/
+rules:
+  # TypeScript-specific
+  member-access: false # Override tslint:recommended
+  member-ordering: false # Override tslint:recommended
+  # no-any: true # proper
+  no-any: false # quiet down! (temporary)
+  no-empty-interface: true
+  no-import-side-effect: true
+  no-internal-module: true
+  no-namespace: true
+  no-parameter-reassignment: true
+  no-reference: true
+  no-unnecessary-type-assertion: true
+  no-var-requires: false # Override tslint:recommended
+  prefer-for-of: true
+  promise-function-async: true
+  quotemark: {options: [single, jsx-double, avoid-template, avoid-escape]}
+  typedef-whitespace:
+    options:
+      - call-signature: nospace
+        index-signature: nospace
+        parameter: nospace
+        property-declaration: nospace
+        variable-declaration: nospace
+      - call-signature: onespace
+        index-signature: onespace
+        parameter: onespace
+        property-declaration: onespace
+        variable-declaration: onespace
+  unified-signatures: true
+
+  # Functionality
+  await-promise: true
+  ban-comma-operator: true
+  curly: {options: [ignore-same-line]}
+  label-position: true
+  no-arg: true
+  no-conditional-assignment: true
+  no-construct: true
+  no-console: false # Override tslint:recommended
+  no-debugger: true
+  no-duplicate-super: true
+  no-duplicate-switch-case: true
+  no-duplicate-variable: true
+  no-dynamic-delete: true
+  no-empty: true
+  no-eval: true
+  no-floating-promises: true
+  no-for-in-array: true
+  no-implicit-dependencies: true
+  no-inferred-empty-object-type: true
+  no-invalid-template-strings: true
+  no-invalid-this: true
+  no-misused-new: true
+  no-return-await: true
+  no-shadowed-variable: true # apparently there's no way to ignore shadowing of certian names, e.g., "err"
+  no-string-literal: true
+  no-string-throw: true
+  no-switch-case-fall-through: true
+  no-this-assignment: true
+  no-unbound-method: {options: [ignore-static]}
+  no-unnecessary-class: {options: [allow-constructor-only, allow-static-only]}
+  # no-unsafe-any: true # (proper)
+  no-unsafe-any: false # lazy
+  no-unsafe-finally: true
+  no-unused-expression: {options: [allow-tagged-template]}
+  # no-unused-variable: [true, [{ignore-pattern: "^_"}]]
+  no-use-before-declare: true
+  no-var-keyword: true
+  no-void-expression: false # `return callback(error)` is so much cleaner!
+  prefer-object-spread: false # preferably true, but TypeScript support isn't there quite yet; see https://git.io/vpRhY
+  radix: true
+  restrict-plus-operands: true
+  triple-equals: false # Override tslint:recommended
+  use-default-type-parameter: true
+  use-isnan: true
+
+  # Maintainability
+  deprecation: true
+  eofline: true
+  indent: {options: [spaces, 2]}
+  linebreak-style: {options: [LF]}
+  max-classes-per-file: false # Override tslint:recommended
+  max-line-length: false # Override tslint:recommended
+  no-duplicate-imports: true
+  no-mergeable-namespace: true
+  object-literal-sort-keys: false # Override tslint:recommended
+  prefer-const: true
+  trailing-comma:
+    options:
+      singleline: never
+      multiline:
+        arrays: always
+        objects: always
+        functions: never
+        imports: always
+        exports: always
+        typeLiterals: always
+      esSpecCompliant: true
+
+  # Style
+  array-type: false # Override tslint:recommended
+  arrow-parens: false # Override tslint:recommended
+  arrow-return-shorthand: true
+  binary-expression-operand-order: true
+  callable-types: true
+  class-name: true
+  comment-format: {options: [check-space]}
+  encoding: true
+  import-spacing: true
+  interface-name: [true, never-prefix] # Override tslint:recommended with TypeScript Handbook recommendation
+  jsdoc-format: false # Override tslint:recommended
+  new-parens: true
+  no-angle-bracket-type-assertion: true
+  no-boolean-literal-compare: true
+  no-consecutive-blank-lines: {options: [2]} # Default is 1
+  no-irregular-whitespace: true
+  no-redundant-jsdoc: true
+  no-reference-import: true
+  no-trailing-whitespace: true
+  no-unnecessary-callback-wrapper: true
+  no-unnecessary-qualifier: true
+  number-literal-format: true
+  object-literal-key-quotes: {options: [consistent-as-needed]}
+  one-line: {options: [check-open-brace, check-whitespace]} # Override tslint:recommended
+  ordered-imports: false # Override tslint:recommended
+  prefer-function-over-method: true
+  prefer-method-signature: true
+  prefer-template: true
+  space-before-function-paren: {options: [never]} # Implications are unclear :/
+  space-within-parens: true
+  switch-final-break: true
+  variable-name: {options: [ban-keywords, check-format, allow-pascal-case, allow-snake-case]}
+  whitespace: {options: [check-branch, check-decl, check-operator, check-separator, check-rest-spread, check-type, check-typecast, check-type-operator, check-preblock]} # do not like: check-module
