@@ -61,7 +61,7 @@ rules:
   no-string-throw: true
   no-switch-case-fall-through: true
   no-this-assignment: true
-  no-unbound-method: {options: [ignore-static]}
+  # no-unbound-method: {options: [ignore-static]} # doesn't recognize methods that ARE bound :(
   no-unnecessary-class: {options: [allow-constructor-only, allow-static-only]}
   # no-unsafe-any: true # (proper)
   no-unsafe-any: false # lazy
